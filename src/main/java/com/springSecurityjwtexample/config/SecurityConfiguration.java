@@ -26,7 +26,7 @@ public class SecurityConfiguration {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("")// WHITE LIST!
+                .requestMatchers("/api/v1/auth/**")// WHITE LIST!
                 .permitAll()// all the above
                 .anyRequest()// authenticate the rest
                 .authenticated()
